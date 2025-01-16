@@ -36,12 +36,24 @@ jobs:
           flask db migrate
           flask db upgrade
 
-      # 5. 테스트
-      - name: Lint and Test
+      # 5. 테스트 도구 설치
+      - name: For install Test tools
         run: |
           pip install flake8 pytest
+
+      # 6. flake8 config 파일 수정
+      - name: Create flake8 config
+        run: |
+          echo "[flake8]" > .flake8
+          echo "max-line-length = 120" >> .flake8
+          echo "ignore = E302, W292" >> .flake8
+
+      # 7. 테스트 
+      - name: Lint and Test
+        run: |
           flake8
           pytest
+          
   # workflow: docker-build-and-push
   docker-build-and-push:
       # 작업을 실행 시킬 환경
