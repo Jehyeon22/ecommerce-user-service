@@ -39,7 +39,7 @@ jobs:
       # 5. 테스트
       - name: Lint and Test
         run: |
-          pip install flask8 pytest
+          pip install flake8 pytest
           flake8
           pytest
   # workflow: docker-build-and-push
