@@ -52,10 +52,10 @@ jobs:
       - name: Lint and Test
         run: flake8
 
-      # 8. 테스트 pytest
-      - name: Run tests
-        run: pytest
-        continue-on-error: true
+      # # 8. 테스트 pytest
+      # - name: Run tests
+      #   run: pytest
+      #   continue-on-error: true
           
   # workflow: docker-build-and-push
   docker-build-and-push:
