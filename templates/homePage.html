@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Your Style</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+        }
+        header nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header nav a {
+            text-decoration: none;
+            color: white;
+            margin: 0 10px;
+        }
+        header nav a:hover {
+            color: #4caf50;
+        }
+        main {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 2.5rem;
+            color: #4caf50;
+        }
+        p {
+            text-align: center;
+            color: #666;
+        }
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .product {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .product:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .product img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .product-details {
+            padding: 15px;
+            text-align: center;
+        }
+        .product-details p {
+            margin: 5px 0;
+        }
+        .product-details p.price {
+            font-weight: bold;
+            color: #4caf50;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="/main">YourBrand</a>
+            </div>
+            <div class="menu">
+                <a href="/main">Shop</a>
+                <a href="#">Review</a>
+                <a href="#">Community</a>
+                <a href="#">About</a>
+                <a href="/logout">Logout</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <h1>Find Your Style</h1>
+        <p>Discover your unique style from our curated collection</p>
+        <div class="products">
+            <!-- Product 1 -->
+            <div class="product">
+                <img src="{{ url_for('static', filename='images/product1.jpg') }}" alt="Product 1">
+                <div class="product-details">
+                    <p>로고 클래식 티셔츠</p>
+                    <p class="price">₩12,000</p>
+                </div>
+            </div>
+            <!-- Product 2 -->
+            <div class="product">
+                <img src="{{ url_for('static', filename='images/product2.jpg') }}" alt="Product 2">
+                <div class="product-details">
+                    <p>화이트 레터링 티셔츠</p>
+                    <p class="price">₩40,000</p>
+                </div>
+            </div>
+            <!-- Add more products -->
+        </div>
+    </main>
+</body>
+</html>

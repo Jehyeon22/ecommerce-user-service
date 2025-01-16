@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce Main Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+
+        .header h1 {
+            margin: 0;
+        }
+
+        .content {
+            text-align: center;
+            margin: 50px;
+        }
+
+        .content h2 {
+            color: #333;
+        }
+
+        .content p {
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .content a {
+            display: inline-block;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .content a:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <h1>Welcome to E-Shop</h1>
+        <p>Your one-stop shop for everything!</p>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content">
+        <h2>Explore Our Products</h2>
+        <p>Browse the latest products and enjoy exclusive discounts.</p>
+        <a href="/login">Login</a>
+    </div>
+</body>
+</html>
