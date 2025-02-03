@@ -110,7 +110,7 @@ jobs:
 
       - name: Deploy to EKS
         run: |
-          kubectl run easy1130/user-service -n test
+          kubectl run user-service --image=easy1130/user-service --namespace=test
 
       - name: Verify Deployment
         run: kubectl get pods -n default
